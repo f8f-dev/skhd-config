@@ -1,7 +1,6 @@
-copy this in ~/.config/
-
-restart skhd
-
-```shell
+```sh
+# Inside a script or function
+mkdir -p ~/.config/skhd
+git clone https://github.com/f8f-dev/skhd-config.git ~/.config/skhd
 skhd --restart-service
 ```
