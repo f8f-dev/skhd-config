@@ -1,6 +1,6 @@
 # Объявляем режимы
-:: default : yabai -m config active_window_border_color 0xff775759
-:: resize @ : yabai -m config active_window_border_color 0xffd75f5f
+:: default : yabai -m config active_window_border_color 0xff775759 ; sketchybar --set mode_indicator label=""
+:: resize @ : yabai -m config active_window_border_color 0xffd75f5f ; sketchybar --set mode_indicator label="RESIZE: h/j/k/l resize · e balance"
 
 # Вход/выход из resize-режима
 default < alt - r ; resize
@@ -23,11 +23,15 @@ alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 
-# move managed window
+# swap managed window
 shift + alt - h : yabai -m window --swap west
 shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
+
+# move managed window
+shift + cmd - h : yabai -m window --warp west
+shift + cmd - l : yabai -m window --warp east
 
 # focus desktop
 alt - 1 : yabai -m space --focus 1
